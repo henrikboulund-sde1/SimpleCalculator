@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="105.0" prefWidth="338.0" spacing="20.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.javafxsimplecalculator.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <HBox prefHeight="25.0" prefWidth="176.0">
+      <children>
+         <TextField fx:id="txtValue1" prefHeight="25.0" prefWidth="158.0" text="0">
+            <HBox.margin>
+               <Insets right="5.0" />
+            </HBox.margin>
+         </TextField>
+         <Label fx:id="lblOperator" text="?" />
+         <TextField fx:id="txtValue2" prefHeight="25.0" prefWidth="161.0" text="0">
+            <HBox.margin>
+               <Insets left="5.0" />
+            </HBox.margin>
+         </TextField>
+      </children>
+   </HBox>
+   <Label prefHeight="17.0" prefWidth="324.0" text="OPERATORS:" />
+   <HBox prefHeight="100.0" prefWidth="200.0">
+      <children>
+         <Button fx:id="btnAddition" mnemonicParsing="false" onAction="#onClickAddition" text="+">
+            <HBox.margin>
+               <Insets right="10.0" />
+            </HBox.margin>
+         </Button>
+         <Button fx:id="btnSubtraction" mnemonicParsing="false" onAction="#onClickSubtraction" text="-">
+            <HBox.margin>
+               <Insets right="10.0" />
+            </HBox.margin>
+         </Button>
+         <Button fx:id="btnMultiplication" mnemonicParsing="false" onAction="#onClickMultiplication" text="X">
+            <HBox.margin>
+               <Insets right="10.0" />
+            </HBox.margin>
+         </Button>
+         <Button fx:id="btnDivide" mnemonicParsing="false" onAction="#onClickDivide" text="/">
+            <HBox.margin>
+               <Insets right="10.0" />
+            </HBox.margin>
+         </Button>
+      </children>
+   </HBox>
+   <Button fx:id="btnCalculate" mnemonicParsing="false" onAction="#onClickCalculate" prefHeight="25.0" prefWidth="341.0" text="CALCULATE" />
+   <HBox prefHeight="100.0" prefWidth="200.0">
+      <children>
+         <Label text="RESULT:">
+            <HBox.margin>
+               <Insets right="5.0" />
+            </HBox.margin></Label>
+         <Label fx:id="lblResult" text="Label" visible="false" />
+      </children>
+   </HBox>
+</VBox>
